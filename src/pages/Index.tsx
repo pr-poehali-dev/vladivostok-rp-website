@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/b1e8094a-70fb-4f08-b428-633dc1dbd418/files/d778a50d-80e3-480f-af7e-1a7b8bca538c.jpg";
 const CHAR_IMG = "https://cdn.poehali.dev/projects/b1e8094a-70fb-4f08-b428-633dc1dbd418/files/b537b64f-8496-41a9-b54f-459110145d0e.jpg";
-const FEATURES_IMG = "https://cdn.poehali.dev/projects/b1e8094a-70fb-4f08-b428-633dc1dbd418/files/d571709a-12c8-4426-8ed5-b227f2944657.jpg";
+const FEATURES_IMG = "https://cdn.poehali.dev/projects/b1e8094a-70fb-4f08-b428-633dc1dbd418/bucket/98594a7e-da99-4b5e-b965-0fcea6fc20c2.png";
 
 const NAV_ITEMS = ["СКАЧАТЬ", "ФОРУМ", "О СЕРВЕРЕ", "КАРЬЕРА", "ВИКИ", "МАГАЗИН", "КОНТАКТЫ"];
 
