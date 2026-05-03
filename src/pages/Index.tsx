@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMG = "https://cdn.poehali.dev/projects/b1e8094a-70fb-4f08-b428-633dc1dbd418/files/d778a50d-80e3-480f-af7e-1a7b8bca538c.jpg";
@@ -92,6 +93,7 @@ export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<number | null>(null);
   const players = useCountUp(3847);
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-vlad-bg font-golos text-white">
@@ -128,9 +130,15 @@ export default function Index() {
             ))}
           </nav>
 
-          <button className="hidden md:flex items-center gap-2 bg-vlad-purple hover:bg-vlad-purple-glow text-white font-oswald font-semibold px-5 py-2 rounded-lg transition-all duration-200 glow-btn text-sm tracking-wider">
-            ПОПОЛНИТЬ СЧЁТ
-          </button>
+          <div className="hidden md:flex items-center gap-2">
+            <button onClick={() => navigate("/cabinet")} className="flex items-center gap-2 border border-vlad-purple/40 hover:border-vlad-purple text-vlad-purple-light font-oswald font-semibold px-4 py-2 rounded-lg transition-all duration-200 hover:bg-vlad-purple/10 text-sm tracking-wider">
+              <Icon name="User" size={15} />
+              КАБИНЕТ
+            </button>
+            <button className="flex items-center gap-2 bg-vlad-purple hover:bg-vlad-purple-glow text-white font-oswald font-semibold px-5 py-2 rounded-lg transition-all duration-200 glow-btn text-sm tracking-wider">
+              ПОПОЛНИТЬ СЧЁТ
+            </button>
+          </div>
 
           <button className="lg:hidden text-gray-400 hover:text-white" onClick={() => setMenuOpen(!menuOpen)}>
             <Icon name={menuOpen ? "X" : "Menu"} size={24} />
